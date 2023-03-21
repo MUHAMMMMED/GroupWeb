@@ -1,0 +1,1668 @@
+
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+
+  <meta charset="UTF-8">
+  
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@0,500;0,700;2,400&family=Koulen&family=Staatliches&display=swap" rel="stylesheet">
+  
+ 
+ 
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+* {box-sizing: border-box;}
+
+              {% if WEb.silderImage %}
+ 
+.hero-image {
+  background-image: url("{{WEb.silderImage.url}}");
+/*    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("slider.png");
+*/  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 98%;
+  margin-right:1%;
+ 
+  margin-top: 5px;
+
+}
+ {% endif %}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+ 
+
+
+ 
+
+ 
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+  
+<style>
+/*
+    Auther: Abdelrhman Said
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+ .head{
+ position: fixed;
+  z-index: 55; 
+
+ }
+.wrapper {
+ 
+  width: 500px;
+  display: inline-flex;
+  list-style: none;
+position: relative;
+  margin-top: 10px;
+  z-index: 55;   margin: auto;
+}
+
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      border: 1px solid #ccc;
+
+
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 15px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e5b0b0;
+  color: #ffffff;
+}
+
+.wrapper .snapchat:hover,
+.wrapper .snapchat:hover .tooltip,
+.wrapper .snapchat:hover .tooltip::before {
+  background: #ffe950;
+  color: #fff;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #08b915;
+  color: #ffffff;
+}
+
+ 
+@media screen and (max-width: 650px) {
+
+
+.wrapper .icon {
+ 
+  background:#fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      border: 1px solid #ccc;
+
+
+}
+.wrapper .tooltip {
+ 
+  top: 5px;
+ 
+}
+ 
+</style>
+      
+ 
+<div  class="head">
+ 
+  <ul class="wrapper">
+<a href=" {{WEb.facebooklinke }} ">
+  <li class="icon facebook">
+    <span class="tooltip">Facebook</span>
+    <span><i class="fab fa-facebook-f"></i></span>
+  </li></a>
+  <a href=" {{WEb.Twitterlinke }} ">
+  <li class="icon twitter">
+    <span class="tooltip">Twitter</span>
+    <span><i class="fab fa-twitter"></i></span>
+  </li></a>
+  <a href=" {{WEb.instagramlinke }} ">
+  <li class="icon instagram">
+    <span class="tooltip">Instagram</span>
+    <span><i class="fab fa-instagram"></i></span>
+  </li></a>
+  <a href=" {{WEb.snapchat }} ">
+  <li class="icon snapchat">
+    <span class="tooltip">snapchat</span>
+    <span><i class="fab fa-snapchat"></i></span>
+  </li></a>
+
+
+<a href=" {{WEb.linkedinlinke }} ">
+  <li class="icon facebook">
+    <span class="tooltip">linkedin</span>
+    <span><i class="fab fa-linkedin"></i></span>
+  </li></a>
+
+<a href=" {{WEb.Whatsapp }} ">
+  <li class="icon whatsapp">
+    <span class="tooltip">whatsapp</span>
+    <span><i class="fab fa-whatsapp"></i></span>
+  </li></a>
+
+
+</ul>
+ </div>
+  
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hero-image">
+ 
+</div>
+
+  
+
+ 
+
+
+
+  
+  <style>
+ 
+.flex-container {
+/*box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;*/
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  width: 98%;
+  margin-right:1%;
+  margin-top: 25px;
+  padding: 30px;
+  background-color: #fff;
+}
+.flex-container1 {
+  /*box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;*/
+ 
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    width: 98%;
+    margin-right:1%;
+    margin-top: 25px;
+    padding: 30px;
+    background-color: #fff;
+  }
+.flex-item-left {
+  background-color: #fff;
+  padding: 10px;
+  flex: 40% ; 
+  border-radius: 8px;
+  margin-top: 5px;
+  float: right;
+}
+
+.flex-item-right {
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+}
+
+
+
+ 
+.chip {
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+   margin: auto;
+}
+
+.chip img {
+  float: right;
+ 
+  height: 150px;
+  width:  150px;
+  border-radius: 50%;
+}
+ 
+.flex-item-left1{
+
+width: 50%; text-align: right; float: right; padding: 8px;
+
+}
+.flex-item-left2{
+
+width: 50%; text-align: right; float: left; padding: 30px; margin : auto;
+}
+
+.button {
+ 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+    margin-top: 30px;
+    margin:auto; 
+ 
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+      margin:auto; 
+}
+@media screen and (max-width: 650px) {
+ 
+ 
+  .flex-container {
+    flex-direction: column;
+  }
+
+.flex-item-left {
+  background-color: #fff;
+  padding: 10px;
+ width: 100%;
+  border-radius: 8px;
+  margin-top: 5px;
+  float: right;
+}
+
+.flex-item-right {
+ 
+
+  width: 100%;
+  padding: 0px;
+}
+
+.chip {
+     flex-direction: column;
+  border-radius: 25px;
+ 
+}
+
+.chip img {
+  float: right;
+ 
+  height: 150px;
+  width:  150px;
+  border-radius: 50%;
+}
+ 
+.flex-item-left1{
+
+width: 100%; text-align: right; float: right; padding: 3px;
+margin:auto; 
+
+}
+.flex-item-left2{
+
+width: 100%; text-align: right; float: left; padding: 3px;margin:auto; 
+}
+
+
+
+ 
+ 
+.button {
+ 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ 
+  cursor: pointer;
+    margin-top: 30px;
+    margin:auto; 
+ 
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+      margin:auto; 
+}
+ 
+ }
+
+
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+
+<div class="flex-container">
+  <div class="flex-item-right">
+   {% if WEb.logo %}
+
+ 
+   <div class="chip">  <img src="{{WEb.logo.url}}" alt="Person" width="96" height="96"> </div>
+
+ {% endif %}
+
+ </div>
+
+   <div class="flex-item-left"> 
+ 
+ <div  class="flex-item-left1"  >  
+
+<h3 style="margin-top: 35px;">
+  {{WEb.Title}} 
+ 
+</h3>
+ </div>
+
+  <div  class="flex-item-left2"  >  
+
+    <div style="margin:auto; width: 100%;      display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+   margin: auto;"> 
+    <button class="button button2" onclick="document.getElementById('id01').style.display='block'"> احجز موعدك الان </button> </div>
+
+  
+ <div></div></div>
+
+
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+   </div>
+</div>
+ 
+<div class="flex-containerinfo" >
+<style>
+
+  .flex-containerinfohead {
+    /*box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;*/
+ 
+      border-radius: 5px;
+      
+      flex-direction: row;
+      font-size: 20px;
+      text-align: center;
+      width: 98%;
+      margin-right:1%;
+      padding-top: 25px;
+      margin-bottom: 25px;
+      
+    }
+.flex-containerinfo {
+/*box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;*/
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  width: 98%;
+  margin-right:1%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+.flex-containerinfo1 {
+  /*box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;*/
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    width: 98%;
+    margin-right:1%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: #fff;
+  }
+
+
+/* Style the tab */
+.tabinfo{
+ 
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+ 
+    float: right;
+    padding: 0px;
+    
+}
+
+/* Style the buttons inside the tab */
+.tabinfo button {
+  background-color: inherit;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 26px;
+  transition: 0.3s;
+  font-size: 17px;
+
+}
+
+/* Change background color of buttons on hover */
+.tabinfo button:hover {
+  background-color: #ddd;
+  border-bottom-color: coral;
+}
+
+/* Create an active/current tablink class */
+.tabinfo button.active {
+  background-color: #ccc;
+  border-bottom-color: coral;
+}
+
+/* Style the tab content */
+.tabcontent {
+ font-family: TheSans !important;
+  display: none;
+  padding: 6px 15px;
+  border: 1px solid #ccc;
+  border-top: none; 
+ padding-top: 15px;
+
+
+/* width: 100%;*/
+}
+.divinfo {
+
+ position: relative;
+ 
+ 
+ 
+ padding-top: 25px;
+
+text-align: right;
+
+}
+
+/* Red border */
+hr.new1 {
+  border-top: 1px solid #ccc;
+  width:100%;
+}
+.section{ font-size: 20px; 
+ 
+ 
+    display: inline-block;
+  padding: 0 10px;
+  
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+margin :3px; 
+margin-bottom: 15px;}
+</style>
+ 
+ 
+
+<div class="tabinfo">
+ 
+
+ 
+<button class="tablinks" onclick="openCity(event, 'info')">عن المستشفى</button>
+
+  <button class="tablinks" onclick="openCity(event, 'section')"> الأقسام  </button> 
+  <button class="tablinks" onclick="openCity(event, 'dr')">الأطباء</button>
+</div>
+
+<div id="dr" class="tabcontent" style="width: 100%;  ">
+ 
+<div style="width: 100%;">
+
+  <style>
+    .scrollmenu {
+     
+      overflow: auto;
+      white-space: nowrap;
+    }
+    
+    .scrollmenu span{
+      display: inline-block;
+   
+      text-decoration: none;
+    }
+    
+    
+    .scrollmenu::-webkit-scrollbar-thumb {
+      background: #fff;
+      width: 15px;
+     outline: 1px solid #eee;
+    }
+    .scrollmenu::-webkit-scrollbar-thumb {
+            background-color: #666;
+           
+          }
+    
+    
+    
+        </style>
+
+
+<style>
+ 
+
+ 
+.column {
+  float: right;
+  width: 290px;
+  margin-bottom: 16px;
+ 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ 
+  margin:5px;
+
+}
+.column:hover {
+  border: 1px solid #333333;
+}
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+ 
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+    height: auto;
+    
+  }
+}
+
+.carddr {
+ 
+}
+
+.container {
+  padding: 0 12px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+.title {font-size: 15px;
+  color: grey;
+  position: relative;
+  margin-bottom: 5px;
+ text-overflow: clip;
+white-space: normal;
+
+}
+
+.buttoncard {
+  border-radius: 5px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #686565;
+  border: 1px solid #ccc;
+  padding-bottom:5px;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.buttoncard:hover {
+  background-color:#d7d7d7;
+  color: #333333;
+  border: 1px solid #333333;
+}
+</style>
+ 
+<div class="flex-containerinfohead " >
+  <h4 style="margin: 25px;"> فريق الأطباء المخلصين لدينا</h4> 
+</div>
+ 
+
+
+{% comment %} <div class="row"> {% endcomment %}
+<div class="scrollmenu">
+
+
+{% for doctor in  WEb.Doctor.all %}
+      
+
+
+  
+  <span >
+  <div class="column"> 
+
+    <div class="carddr">
+          {% comment %} <a  href="{% url 'webs:doctoR'  doctor.slug %}"> {% endcomment %}
+  {% if  doctor.Image %}
+ 
+      <img src="{{doctor.Image.url}}" alt=" {{doctor.Name}} " style="width:100%;  border-radius: 5px 5px 0px 0px;">  </a>
+ {% endif %}
+      <div class="container">
+        <h5  >  {{doctor.Name}} </h5>
+        <samp class="title">  {{doctor.jobtitle}}</samp>
+   
+ 
+
+
+        {% comment %} <a  href="{% url 'webs:doctoR'  doctor.slug %}">
+        <p><button class="buttoncard">معرفة المزيد</button></p></a>  {% endcomment %}
+      </div>
+    </div>
+ </div></span> 
+ {% endfor %}
+
+
+
+</div>
+
+
+</div>
+</div>
+
+<div id="info" class="tabcontent"style="width: 100%;display: block; ">
+
+
+<div class="divinfo">
+  <h3 style="font-size: 25px;padding: 5px;margin-top: 25px; color: #071c4d">
+  عن المستشفى
+</h3>
+  <p style="font-size: 20px;padding-top: 13px;padding: 10px;">
+    {{WEb.info}} 
+
+</p> 
+
+<hr class="new1">
+</div>
+
+
+
+<div class="divinfo">
+  <h3 style="font-size: 25px;padding: 5px;  color:#071c4d">
+  التخصصات الطبية
+</h3>
+
+{% for section in  WEb.section.all %}
+          
+                                            
+
+  <div class="section" >
+    {{section.name}}    
+
+</div>  {% endfor %}
+    
+
+
+</div>
+
+<div class="divinfo">
+  <h3 style="font-size: 25px;padding: 5px;  color: #071c4d">
+  التأمين الطبي
+</h3>
+
+{% for section in  WEb.insurance.all %}
+          
+                                            
+
+  <div class="section" >
+    {{section.name}}    
+
+</div>  {% endfor %}
+ 
+</div>
+<hr class="new1">
+
+<button class="buttoncard" onclick="openCity(event, 'section')"> الأقسام  </button>
+ 
+
+
+
+
+</div>
+
+<div id="section" class="tabcontent"style="width: 100%;">
+ 
+  <div class="flex-containerinfohead " >
+  <h4 style="margin: 25px;">  الأقسام</h4>
+</div>
+
+
+
+<div class="scrollmenu">
+  {% comment %} <div class="row"> {% endcomment %}
+ 
+
+  
+  
+    {% for section in  WEb.section.all %}
+         <span >
+    <div class="column"> 
+  
+      <div class="carddr">
+            {% comment %} <a  href="{% url 'webs:doctoR'  section.slug %}"> {% endcomment %}
+
+
+  {% if  section.image %}
+ 
+ 
+
+        <img src="{{section.image.url}}" alt="  {{section.name}}     " style="width:100%;  border-radius: 5px 5px 0px 0px;">  
+ {% endif %}
+
+      </a>
+        <div class="container">
+          <h5  >  {{section.name}} </h5>
+
+            <span  class="title">  {{section.Description}} </span>  
+  
+
+
+          {% comment %} <a  href="{% url 'webs:doctoR'  section.slug %}"> {% endcomment %}
+          {% comment %} <p><button class="buttoncard">معرفة المزيد</button></p></a>  {% endcomment %}
+        </div>
+      </div>
+   </div>         </span >
+   {% endfor %}
+
+  </div>   
+  <hr class="new1">
+
+  <button class="buttoncard" onclick="openCity(event, 'dr')"> الأطباء  </button>
+  
+
+
+</div>  
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</div>
+
+
+
+
+
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 300px;
+ 
+
+    border-radius: 5px;
+ 
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+      border-radius: 5px 5px 0px 0px ;
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+   div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 49%;
+
+ 
+ 
+}
+}
+@media screen and (max-width: 650px) {
+ div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 100%;
+
+
+    border-radius: 5px;
+ 
+}
+}
+</style>
+
+  <div style="width: 100%;"><h4 style="margin: 25px;"> أحدث العروض</h4></div>
+<div class="flex-container" >
+  {% for landingpage in  WEb.Landingpage.all %}
+  
+
+<div class="gallery">
+  <a  href="{% url 'webs:landingpage'  landingpage.slug %}">
+
+  {% if landingpage.Image %}
+ 
+
+
+    <img src="{{landingpage.Image.url}} " alt="  {{landingpage.Title}} " width="600" height="400">
+ {% endif %}
+
+
+  </a>
+  <h5>    {{landingpage.Title}}   </h5>
+  <div class="desc">  {{landingpage.Description}}  </div>
+  <a  href="{% url 'webs:landingpage'  landingpage.slug %}">
+    <div  style='padding-bottom:19px;'><button class="buttoncard">معرفة المزيد</button> </div></a> 
+ 
+</div>
+{% endfor %}
+ 
+
+
+ 
+
+</div>
+<!-- 
+<div class="flex-container" >
+
+
+<div class="flex-right"id="section1"> -->
+  
+<style>
+.flex-left {
+  background-color: #fff;
+  padding: 10px;
+  flex: 40% ; 
+  border-radius: 8px;
+  margin-top: 5px;
+  float: right; 
+}
+
+.flex-right {
+  background-color: #fff;
+ border: 1px solid #ccc;
+ width: 50%;
+  padding: 0px;
+}
+
+
+
+ 
+
+.container {
+  border-radius: 5px;
+  background-color:  #fff;
+  padding: 20px;
+}
+
+label{font-size: 15px;}
+
+
+@media screen and (max-width: 650px) {
+ 
+.flex-left {
+  background-color: #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 5px;
+  float: right; 
+}
+
+.flex-right {
+  background-color: #fff;
+ border: 1px solid #ccc;
+ width: 100%;
+  padding: 0px;
+}
+
+
+
+
+}
+</style>
+ 
+ 
+
+
+
+
+<!-- </div> -->
+
+<div style="width: 100%;"><h4 style="margin: 25px;"> صور من العيادات</h4></div>
+<div class="flex-container" >
+  {% for image in  WEb.image.all %}
+  
+
+<div class="gallery">
+   {% if image.image %}
+ 
+
+
+ 
+
+    <img src="{{image.image.url}} " alt="  {{image.imagename}} " width="600" height="400">
+  {% endif %}
+  <p  style='font-size:15px;padding-bottom:5px;'>   {{image.imagename}}   </p>
+ 
+ 
+</div>
+{% endfor %}
+ 
+
+
+ 
+
+</div>
+
+
+
+{% comment %} <div class="flex-containerinfo" >
+
+<style>
+.accordion {
+/*  background-color: #ccc;
+*/   margin-top:8px;
+  color: #000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s; border: 1px solid #ccc;
+}
+
+.active, .accordion:hover {
+  background-color: #ddd;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: 15px;
+
+}
+</style>
+<h4 style="margin-top: 25px;"> أسئلة مكررة</h4>
+
+<h4 style="margin-top: 25px;"> أسئلة مكررة</h4>
+<p style="font-size: 15px;">  ستجد أدناه إجابات لبعض الأسئلة الأكثر شيوعًا في  {{WEb.Title}}  نحن نضيف باستمرار الأسئلة الأكثر شيوعًا إلى هذه الصفحة
+
+</p>
+
+
+{% for question in  WEb.qestions.all %}
+        
+        
+
+ 
+
+
+
+<button class="accordion"> {{question.question}} </button>
+
+
+<div class="panel">
+  <p style="padding: 15px;">
+ {{question.answer}}
+
+ 
+</p>
+</div>
+{% endfor %}
+ 
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</div> {% endcomment %}
+
+
+
+
+
+
+
+<div class="flex-containerinfo1" >
+
+  <style>
+   
+  .qus {
+  
+   
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  .accordion {
+  
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top:0px;
+    color: #000;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+   
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+     border: 1px solid #ccc;
+  }
+  
+   
+  
+  
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    margin-top:15px;
+    position: relative;
+    font-size: 15px;
+    padding:3px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width: 100%;
+   text-align: center;
+  }
+  
+  @media screen and (max-width: 650px) {
+  .qus {
+  
+   
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+   
+  
+  
+  }
+  </style>
+   
+ 
+
+  <h4 style="margin-top: 25px;"> أسئلة مكررة</h4>
+  <p style="font-size: 15px; margin-bottom:15px;">  ستجد أدناه إجابات لبعض الأسئلة الأكثر شيوعًا في  {{WEb.Title}}  نحن نضيف باستمرار الأسئلة الأكثر شيوعًا إلى هذه الصفحة
+  
+  </p>
+  
+  
+ 
+
+ 
+  {% for question in  WEb.qestions.all %}
+  <div class="qus">
+  
+  <button class="accordion"> {{question.question}} </button>
+  <div class="panel">
+    <p>  {{question.answer}}  </p>
+  </div>
+  </div>
+  {% endfor %}
+  
+  
+  
+ 
+  
+  
+  
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+  
+  </div>
+  
+
+
+ 
+
+
+
+ 
+
+
+ <div class="flex-containerinfo" style=" background-color:  #ccc;  border: 1px solid #777; " > 
+  <style>
+  
+  .divbut{margin: auto;  padding: 25px;  width: 200px;}
+  
+  .button {
+    background-color:  #071c4d; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+   border-radius: 5px;
+    cursor: pointer;margin: auto;
+  }
+  
+  
+  .button2 {padding: 12px 28px; width: 200px;}
+  
+  @media screen and (max-width: 650px) {
+  .button2 {padding: 12px 28px;  width: 100%}
+  .divbut{margin: auto;  padding: 25px;   }
+  }
+  </style>
+  
+  <div class="divbut" style=""   ><button class="button button2" onclick="document.getElementById('id01').style.display='block'"> احجز موعدك الان </button></div>
+  
+  
+  
+  
+     </div> 
+  
+  
+  
+   <div class="flex-containerinfo" style="padding: 15px; margin-bottom:  1px; " > 
+  <style type="text/css">
+   .aa {
+    color: #007bff;
+text-decoration: none;
+    background-color: transparent;
+font-size: 14px;
+} 
+
+
+  </style>
+
+
+
+<div class="col-md-12" style=" text-align: center; font-size: 14px;">
+
+<span>  {{WEb.Title}}  Copyright ©  2023   </span> 
+</div> 
+<div class="col-md-12" style=" text-align: center; font-size: 14px;">
+<a  class="aa" href="https://wa.me/+966551808768">created by | الهدف الرقمي</a>
+       </div>  </div>  <br>
+  
+  <style type="text/css">
+    
+   
+  .flut{    position: fixed;
+      padding: 15px;
+      bottom: 20px;
+      right: 15px;
+   
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 20px;
+   
+      z-index: 100;
+  
+  
+  }
+  
+  .button3 {padding: 10px 20px; border-radius: 50px;}
+ 
+  
+  </style>
+  
+  
+  
+  
+  
+  
+  <div class="flut"   ><button class="button button3"onclick="document.getElementById('id01').style.display='block'"> احجز الآن</button></div>
+  
+  
+  
+ 
+<style>
+ 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #fff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  #fff;
+}
+
+/* Set a style for all buttons */
+.buttonform {
+  background-color: #071c4d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.buttonform:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+ text-align: center;
+   width:100px;
+    color:#fff;
+
+ border-radius:5px;
+ margin: auto
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px; 
+
+  margin: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+
+ 
+}
+
+/* The Close Button (x) */
+.close {
+   position: absolute;
+  left: 5px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+ 
+
+
+
+ 
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action=" " method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <!--   <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+      <h2> احجز الآن</h2>
+    </div>
+
+    <div class="container">
+
+
+     {% csrf_token %}
+      {% bootstrap_form form  %} 
+      {% buttons %}
+              
+      <button class="buttonform" type="submit">احجز</button>{% endbuttons %}
+     
+    </div>
+
+    <div class="container"  >
+      <div class="cancelbtn"   onclick="document.getElementById('id01').style.display='none'">
+
+ إلغاء  
+
+
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+</html>
+ 
